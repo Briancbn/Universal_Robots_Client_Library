@@ -100,7 +100,7 @@ install(FILES ur_client_libraryConfig.cmake
   DESTINATION lib/cmake/ur_client_library)
 
 # When built with catkin available, install package.xml
-find_package(catkin)
+find_package(catkin QUIET)
 if(catkin_FOUND)
   install(FILES package.xml DESTINATION share/${PROJECT_NAME})
 endif()
